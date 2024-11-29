@@ -60,13 +60,7 @@ const LoginScreen = () => {
       </View>
 
       {/* Tombol Login */}
-      <TouchableOpacity
-        onPress={() => {
-          router.dismissAll();
-          router.push("/(tabs)");
-        }}
-        style={styles.loginButton}
-      >
+      <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
         <Text style={styles.loginButtonText}>Login</Text>
       </TouchableOpacity>
 
