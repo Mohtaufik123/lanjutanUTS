@@ -18,7 +18,7 @@ const LoginScreen = () => {
     // Logika untuk login
     console.log("Email:", email);
     console.log("Password:", password);
-    router.push("/home"); // Ganti dengan rute halaman Home
+    router.push("/(tabs)"); // Ganti dengan rute halaman Home
   };
 
   return (
@@ -60,22 +60,16 @@ const LoginScreen = () => {
       </View>
 
       {/* Tombol Login */}
-      <TouchableOpacity
-        onPress={() => {
-          router.dismissAll();
-          router.push("/(tabs)");
-        }}
-        style={styles.loginButton}
-      >
+      <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
         <Text style={styles.loginButtonText}>Login</Text>
       </TouchableOpacity>
 
       {/* Navigasi ke halaman lain */}
       <View style={styles.linkContainer}>
-        <TouchableOpacity onPress={() => router.push("/register")}>
+        <TouchableOpacity onPress={() => router.push("/daftarakun")}>
           <Text style={styles.linkText}>Daftar Akun Baru</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => router.push("/forgot-password")}>
+        <TouchableOpacity onPress={() => router.push("/lupapassword")}>
           <Text style={styles.linkText}>Lupa Kata Sandi?</Text>
         </TouchableOpacity>
       </View>
